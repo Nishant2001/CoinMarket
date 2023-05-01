@@ -1,8 +1,38 @@
-import React from "react";
+import {
+  AppBar,
+  Container,
+  MenuItem,
+  Select,
+  Toolbar,
+  Typography,
+} from "@material-ui/core";
+import {
+  createTheme,
+  makeStyles,
+  ThemeProvider,
+} from "@material-ui/core/styles";
+import { useHistory } from "react-router-dom";
+import { CryptoState } from "../CryptoContext";
 
-const Header = () => {
-  return <div>Header</div>;
-};
+const useStyles = makeStyles((theme) => ({
+  title: {
+    flex: 1,
+    color: "gold",
+    fontFamily: "Montserrat",
+    fontWeight: "bold",
+    cursor: "pointer",
+  },
+}));
+
+const darkTheme = createTheme({
+  palette: {
+    primary: {
+      main: "#fff",
+    },
+    type: "dark",
+  },
+});
+
 function Header() {
   const classes = useStyles();
   const { currency, setCurrency } = CryptoState();
@@ -39,6 +69,5 @@ function Header() {
     </ThemeProvider>
   );
 }
-
 
 export default Header;
