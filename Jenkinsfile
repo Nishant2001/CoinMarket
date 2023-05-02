@@ -11,7 +11,7 @@ pipeline
     {
       steps 
       {
-        sh 'yarn'
+        bat 'yarn'
       }
     }
 
