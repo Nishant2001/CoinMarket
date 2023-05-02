@@ -9,8 +9,10 @@ pipeline
   {
     stage('Prepare') {
       steps{
+    
     bat 'npm install -g yarn'
     bat 'yarn install'
+        bat 'yarn config set registry https://registry.npmjs.org'
       }
   }
     
