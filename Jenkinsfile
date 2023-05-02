@@ -8,8 +8,10 @@ pipeline
   stages 
   {
     stage('Prepare') {
+      steps{
     bat 'npm install -g yarn'
     bat 'yarn install'
+      }
   }
     
     stage('Build') 
