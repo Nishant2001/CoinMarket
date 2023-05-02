@@ -11,7 +11,7 @@ pipeline
     {
       steps 
       {
-        bat 'yarn'
+        bat 'npm install'
       }
     }
 
